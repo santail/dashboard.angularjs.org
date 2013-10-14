@@ -38,17 +38,6 @@
     </div>
   </div>
 
-  <div class="github-status" ng-controller="GithubStatusController">
-    <div class="branch-title milestone-title" bind-markdown="milestone.title"></div>
-    <progress-bar done="milestone.done" total="milestone.total"></progress-bar>
-
-    <card ng-repeat="card in milestone.cards" card-data="card"></card>
-    <div class="totals">
-      <card ng-repeat="card in milestone.totalCards" card-data="card"></card>
-    </div>
-  </div>
-
-
   <div class="notification notification-error" id="notification" ng-class="{'notification-active':brokenBuild}">
     <div class="notification-title">
       <div bind-markdown="brokenBuild.branch"></div>
